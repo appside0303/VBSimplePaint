@@ -1,0 +1,12 @@
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.vbproj.AssemblyReference.cache
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.Main.resources
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.Resources.resources
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.vbproj.GenerateResource.cache
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.vbproj.CoreCompileInputs.cache
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\bin\Debug\VBSimplePaint.exe.config
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\bin\Debug\VBSimplePaint.exe
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\bin\Debug\VBSimplePaint.pdb
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\bin\Debug\VBSimplePaint.xml
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.exe
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.xml
+C:\Users\user\src\repos\VBSimplePaint\VBSimplePaint\obj\Debug\VBSimplePaint.pdb

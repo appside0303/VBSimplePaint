@@ -8,8 +8,10 @@ Public Class common
         Dim image As Image = Nothing
 
         Try
-
-            image = Image.FromFile(fileName)
+            Dim fs As FileStream
+            fs = New FileStream(fileName, FileMode.Open, FileAccess.Read)
+            image = System.Drawing.Image.FromStream(fs)
+            fs.Close()
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "LoadFile")
@@ -19,15 +21,17 @@ Public Class common
 
     End Function
 
-    Public Sub SaveFile(ByVal fileName As String, pic As PictureBox)
+    Public Sub SaveFile(ByVal fileName As String, pic As Image, paths As List(Of Drawing2D.GraphicsPath))
 
         Try
 
-            Dim image As Image
+            Dim g As Graphics = Graphics.FromImage(pic)
 
-            image = pic.Image
+            For Each path As Drawing2D.GraphicsPath In paths
+                g.DrawPath(Pens.Red, path)
+            Next
 
-            image.Save(fileName)
+            pic.Save(fileName)
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "SaveFile")

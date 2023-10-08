@@ -29,6 +29,11 @@ Partial Class Main
         Me.上書き保存SToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.名前を付けて保存AToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.終了XToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.編集EToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.点PToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.線LToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.円CToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.長方形RToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,7 +49,7 @@ Partial Class Main
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ファイルFToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ファイルFToolStripMenuItem, Me.編集EToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -61,26 +66,57 @@ Partial Class Main
         '開くOToolStripMenuItem
         '
         Me.開くOToolStripMenuItem.Name = "開くOToolStripMenuItem"
-        Me.開くOToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.開くOToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.開くOToolStripMenuItem.Text = "開く(&O)"
         '
         '上書き保存SToolStripMenuItem
         '
         Me.上書き保存SToolStripMenuItem.Name = "上書き保存SToolStripMenuItem"
-        Me.上書き保存SToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.上書き保存SToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.上書き保存SToolStripMenuItem.Text = "上書き保存(&S)"
         '
         '名前を付けて保存AToolStripMenuItem
         '
         Me.名前を付けて保存AToolStripMenuItem.Name = "名前を付けて保存AToolStripMenuItem"
-        Me.名前を付けて保存AToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.名前を付けて保存AToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.名前を付けて保存AToolStripMenuItem.Text = "名前を付けて保存(&A)"
         '
         '終了XToolStripMenuItem
         '
         Me.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem"
-        Me.終了XToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.終了XToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.終了XToolStripMenuItem.Text = "終了(&X)"
+        '
+        '編集EToolStripMenuItem
+        '
+        Me.編集EToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.点PToolStripMenuItem, Me.線LToolStripMenuItem, Me.円CToolStripMenuItem, Me.長方形RToolStripMenuItem})
+        Me.編集EToolStripMenuItem.Name = "編集EToolStripMenuItem"
+        Me.編集EToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.編集EToolStripMenuItem.Text = "編集(&E)"
+        '
+        '点PToolStripMenuItem
+        '
+        Me.点PToolStripMenuItem.Name = "点PToolStripMenuItem"
+        Me.点PToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.点PToolStripMenuItem.Text = "点(&P)"
+        '
+        '線LToolStripMenuItem
+        '
+        Me.線LToolStripMenuItem.Name = "線LToolStripMenuItem"
+        Me.線LToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.線LToolStripMenuItem.Text = "線(&L)"
+        '
+        '円CToolStripMenuItem
+        '
+        Me.円CToolStripMenuItem.Name = "円CToolStripMenuItem"
+        Me.円CToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.円CToolStripMenuItem.Text = "円(&C)"
+        '
+        '長方形RToolStripMenuItem
+        '
+        Me.長方形RToolStripMenuItem.Name = "長方形RToolStripMenuItem"
+        Me.長方形RToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.長方形RToolStripMenuItem.Text = "長方形(&R)"
         '
         'Main
         '
@@ -107,4 +143,9 @@ Partial Class Main
     Friend WithEvents 上書き保存SToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 名前を付けて保存AToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 終了XToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 編集EToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 点PToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 線LToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 円CToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 長方形RToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports System.Text
 
 Public Class common
 
@@ -26,9 +25,10 @@ Public Class common
         Try
 
             Dim g As Graphics = Graphics.FromImage(pic)
+            Dim pen As Pen = Pens.Black
 
             For Each path As Drawing2D.GraphicsPath In paths
-                g.DrawPath(Pens.Red, path)
+                g.DrawPath(pen, path)
             Next
 
             pic.Save(fileName)

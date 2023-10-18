@@ -4,20 +4,15 @@ Public Class Main
 
     Private FileName As String = ""
     Private TitleName As String
-    Private Modified As Boolean
-
     Private c As New common
-
     Private paths As New List(Of Drawing2D.GraphicsPath)
-
     Private drawMode As Integer = 0
-
     Private beforeX As Integer
     Private beforeY As Integer
-
     Private mode As Integer = 0 '0:点,1:線
     Private mouseClickCount As Integer = 0
-    Private submode As Integer = 0 '0:円,1:長方形
+    Private submode As Integer = 0 '0:線, 1:円, 2:長方形
+    Private pen As Pen = Pens.Black
 
     Private Sub SetTitle()
 
@@ -28,10 +23,6 @@ Public Class Main
     Private Sub ReadFile()
 
         Dim ofd As New OpenFileDialog
-
-        If CheckFileProcess() = False Then
-            Exit Sub
-        End If
 
         Try
 
@@ -46,6 +37,7 @@ Public Class Main
 
             Dim image As Image = c.LoadFile(FileName)
 
+            paths.Clear()
             pictureBox.Image = image
 
             SetTitle()
@@ -55,27 +47,6 @@ Public Class Main
         End Try
 
     End Sub
-
-    Private Function CheckFileProcess() As Boolean
-
-        If Modified = True Then
-            Dim result As DialogResult = MessageBox.Show(Me, "ファイルは変更されています。" + vbNewLine + "の変更を保存しますか？", TitleName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                Dim ret As Boolean
-                ret = SaveFile()
-                If ret = False Then
-                    Return False
-                End If
-            Else
-                If result = DialogResult.Cancel Then
-                    Return False
-                End If
-            End If
-        End If
-
-        Return True
-
-    End Function
 
     Private Function SaveFile() As Boolean
 
@@ -91,8 +62,6 @@ Public Class Main
         End If
 
         c.SaveFile(FileName, pictureBox.Image, paths)
-
-        Modified = False
 
         Return True
 
@@ -110,8 +79,6 @@ Public Class Main
         FileName = sfd.FileName
 
         c.SaveFile(FileName, pictureBox.Image, paths)
-
-        Modified = False
 
         Return True
 
@@ -153,9 +120,11 @@ Public Class Main
                     Dim rect As Rectangle = New Rectangle(beforeX, beforeY, e.X - beforeX, e.Y - beforeY)
                     path.AddRectangle(rect)
                 End If
+
                 paths.Add(path)
-                    pictureBox.Invalidate()
-                    mouseClickCount = 0
+                'debug
+                pictureBox.Invalidate()
+                mouseClickCount = 0
                 End If
 
                 beforeX = e.X
@@ -169,13 +138,8 @@ Public Class Main
 
         If mode = 0 Then
 
-            path.AddEllipse(e.X, e.Y, 1, 1)
-            paths.Add(path)
-
             beforeX = e.X
             beforeY = e.Y
-
-            pictureBox.Invalidate()
 
             drawMode = 1
 
@@ -194,16 +158,10 @@ Public Class Main
 
     End Sub
 
-    Private Sub pictureBox_Paint(sender As Object, e As PaintEventArgs) Handles pictureBox.Paint
-
-        For Each path As Drawing2D.GraphicsPath In paths
-            e.Graphics.DrawPath(Pens.Red, path)
-        Next
-
-    End Sub
 
     Private Sub pictureBox_MouseMove(sender As Object, e As MouseEventArgs) Handles pictureBox.MouseMove
         If mode = 0 And drawMode = 1 Then
+
             Dim g As Graphics = CreateGraphics()
 
             Dim path As New Drawing2D.GraphicsPath
@@ -243,5 +201,15 @@ Public Class Main
 
     Private Sub 長方形RToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 長方形RToolStripMenuItem.Click
         mode = 3
+    End Sub
+
+    Private Sub pictureBox_Paint(sender As Object, e As PaintEventArgs) Handles pictureBox.Paint
+
+        For Each path As Drawing2D.GraphicsPath In paths
+
+            e.Graphics.DrawPath(pen, path)
+
+        Next
+
     End Sub
 End Class

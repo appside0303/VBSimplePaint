@@ -173,7 +173,6 @@ Public Class Main
             beforeY = e.Y
 
             pictureBox.Invalidate()
-        ElseIf mode = 1 And drawMode = 1 Then
 
         End If
     End Sub
@@ -194,14 +193,15 @@ Public Class Main
         mode = 2
     End Sub
 
+    Private Sub 長方形RToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 長方形RToolStripMenuItem.Click
+        mode = 3
+    End Sub
+
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim image As Image = New Bitmap(Me.Width, Me.Height)
         pictureBox.Image = Image
     End Sub
 
-    Private Sub 長方形RToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 長方形RToolStripMenuItem.Click
-        mode = 3
-    End Sub
 
     Private Sub pictureBox_Paint(sender As Object, e As PaintEventArgs) Handles pictureBox.Paint
 
@@ -210,6 +210,18 @@ Public Class Main
             e.Graphics.DrawPath(pen, path)
 
         Next
+
+    End Sub
+
+    Private Sub 黒ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 黒ToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub 赤ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 赤ToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub 黄色ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 黄色ToolStripMenuItem.Click
 
     End Sub
 End Class

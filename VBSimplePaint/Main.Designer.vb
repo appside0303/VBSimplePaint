@@ -101,50 +101,50 @@ Partial Class Main
         '点PToolStripMenuItem
         '
         Me.点PToolStripMenuItem.Name = "点PToolStripMenuItem"
-        Me.点PToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.点PToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.点PToolStripMenuItem.Text = "点(&P)"
         '
         '線LToolStripMenuItem
         '
         Me.線LToolStripMenuItem.Name = "線LToolStripMenuItem"
-        Me.線LToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.線LToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.線LToolStripMenuItem.Text = "線(&L)"
         '
         '円CToolStripMenuItem
         '
         Me.円CToolStripMenuItem.Name = "円CToolStripMenuItem"
-        Me.円CToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.円CToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.円CToolStripMenuItem.Text = "円(&C)"
         '
         '長方形RToolStripMenuItem
         '
         Me.長方形RToolStripMenuItem.Name = "長方形RToolStripMenuItem"
-        Me.長方形RToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.長方形RToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.長方形RToolStripMenuItem.Text = "長方形(&R)"
         '
         '色ToolStripMenuItem
         '
         Me.色ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.黒ToolStripMenuItem, Me.赤ToolStripMenuItem, Me.黄色ToolStripMenuItem})
         Me.色ToolStripMenuItem.Name = "色ToolStripMenuItem"
-        Me.色ToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.色ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.色ToolStripMenuItem.Text = "色"
         '
         '黒ToolStripMenuItem
         '
         Me.黒ToolStripMenuItem.Name = "黒ToolStripMenuItem"
-        Me.黒ToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.黒ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.黒ToolStripMenuItem.Text = "黒"
         '
         '赤ToolStripMenuItem
         '
         Me.赤ToolStripMenuItem.Name = "赤ToolStripMenuItem"
-        Me.赤ToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.赤ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.赤ToolStripMenuItem.Text = "赤"
         '
         '黄色ToolStripMenuItem
         '
         Me.黄色ToolStripMenuItem.Name = "黄色ToolStripMenuItem"
-        Me.黄色ToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.黄色ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.黄色ToolStripMenuItem.Text = "黄色"
         '
         'Main
